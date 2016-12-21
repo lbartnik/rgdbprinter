@@ -5,7 +5,7 @@ Compare output with the beautifier and without it.
 
 ### Call and closure
 
-__With (re-formatted to fit inside a Markdown code block)__
+_With (re-formatted to fit inside a Markdown code block)_
 ```
 #10 0x00007ffff787c9ac in Rf_applyClosure (
     call=g(c("a", "b"), 1, c(1.0, 2.0), True),
@@ -18,7 +18,7 @@ __With (re-formatted to fit inside a Markdown code block)__
     suppliedvars=) at ../../../src/main/eval.c:1135
 ```
 
-__Without (re-formatted to fit inside a Markdown code block)__
+_Without (re-formatted to fit inside a Markdown code block)_
 ```
 #10 0x00007ffff787c9ac in Rf_applyClosure (call=0x55555626bf18, 
                                            op=0x55555626b720,
@@ -31,7 +31,7 @@ __Without (re-formatted to fit inside a Markdown code block)__
 
 ### Bytecode and environment
 
-__With__
+_With_
 ```
 #6  0x00007ffff788b67b in bcEval (body=<bytecode>,
                                   rho=<environment>,
@@ -39,7 +39,7 @@ __With__
     at ../../../src/main/eval.c:5658
 ```
 
-__Without__
+_Without_
 ```
 #6  0x00007ffff788b67b in bcEval (body=0x55555626a110,
                                   rho=0x55555626c358,
@@ -51,7 +51,7 @@ __Without__
 ## Full backtrace
 
 
-__With__
+_With_
 ```
 #0  0x00007ffff726ee83 in __select_nocancel () at ../sysdeps/unix/syscall-template.S:84
 #1  0x00007ffff79be2ef in R_SelectEx (n=1, readfds=0x7ffff7dd5400 <readMask.11096>, writefds=0x0, exceptfds=0x0, timeout=0x7fffffffa170, intr=0x0)
@@ -82,7 +82,7 @@ __With__
 ```
 
 
-__Without__
+_Without_
 ```
 #0  0x00007ffff726ee83 in __select_nocancel () at ../sysdeps/unix/syscall-template.S:84
 #1  0x00007ffff79be2ef in R_SelectEx (n=1, readfds=0x7ffff7dd5400 <readMask.11096>, writefds=0x0, exceptfds=0x0, timeout=0x7fffffffa170, intr=0x0)
