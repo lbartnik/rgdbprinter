@@ -29,7 +29,29 @@ _Without (re-formatted to fit inside a Markdown code block)_
 ```
 
 
-### Bytecode and environment
+### How to use it?
+
+It's really simple:
+
+* start `R` in gdb
+* `source` the Python script in `gdb`
+* start `R` and tell it to do something
+* interrupt execution (simply press `Ctrl`+`C`)
+* print backtrace (`bt`)
+
+
+```bash
+R -d gdb
+(gdb) source printer.py
+(gdb) r -e 'Sys.sleep(1000)'
+Ctrl+C
+(gdb) bt
+```
+
+
+# Other examples
+
+## Bytecode and environment
 
 _With_
 ```
