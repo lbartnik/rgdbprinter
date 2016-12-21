@@ -1,4 +1,3 @@
-# rgdbprinter
 Pretty-printer for R in GDB
 ===========================
 
@@ -6,15 +5,26 @@ Compare output with the beautifier and without it.
 
 ### Call and closure
 
-__With__
+__With (re-formatted to fit inside a Markdown code block)__
 ```
-#10 0x00007ffff787c9ac in Rf_applyClosure (call=g(c("a", "b"), 1, c(1.0, 2.0), True), op=<closure: a=, b=, c=, d=, { Sys.sleep(3.0) }>, 
-    arglist=<promise: c("a", "b")>, <promise: 1>, <promise: c(1.0, 2.0)>, <promise: True>, rho=<environment>, suppliedvars=) at ../../../src/main/eval.c:1135
+#10 0x00007ffff787c9ac in Rf_applyClosure (
+    call=g(c("a", "b"), 1, c(1.0, 2.0), True),
+    op=<closure: a=, b=, c=, d=, { Sys.sleep(3.0) }>, 
+    arglist=<promise: c("a", "b")>,
+            <promise: 1>,
+            <promise: c(1.0, 2.0)>,
+            <promise: True>,
+    rho=<environment>,
+    suppliedvars=) at ../../../src/main/eval.c:1135
 ```
 
-__Without__
+__Without (re-formatted to fit inside a Markdown code block)__
 ```
-#10 0x00007ffff787c9ac in Rf_applyClosure (call=0x55555626bf18, op=0x55555626b720, arglist=0x55555626c6d8, rho=0x55555626b818, suppliedvars=0x555555769b28)
+#10 0x00007ffff787c9ac in Rf_applyClosure (call=0x55555626bf18, 
+                                           op=0x55555626b720,
+                                           arglist=0x55555626c6d8,
+                                           rho=0x55555626b818,
+                                           suppliedvars=0x555555769b28)
     at ../../../src/main/eval.c:1135
 ```
 
@@ -23,12 +33,18 @@ __Without__
 
 __With__
 ```
-#6  0x00007ffff788b67b in bcEval (body=<bytecode>, rho=<environment>, useCache=TRUE) at ../../../src/main/eval.c:5658
+#6  0x00007ffff788b67b in bcEval (body=<bytecode>,
+                                  rho=<environment>,
+                                  useCache=TRUE)
+    at ../../../src/main/eval.c:5658
 ```
 
 __Without__
 ```
-#6  0x00007ffff788b67b in bcEval (body=0x55555626a110, rho=0x55555626c358, useCache=TRUE) at ../../../src/main/eval.c:5658
+#6  0x00007ffff788b67b in bcEval (body=0x55555626a110,
+                                  rho=0x55555626c358,
+                                  useCache=TRUE)
+    at ../../../src/main/eval.c:5658
 ```
 
 
